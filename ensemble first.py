@@ -30,7 +30,11 @@ for pdbid in pdbids:
         if mappings != []:
             atommap = mappings[0][0]
             ensemble.addCoordset(atommap, weights=atommap.getFlags('mapped'))
-        
+        else:
+            unmatched = []
+            unmatched.append(pdbid, chain)
+            print unmatched
+            # make a list of what is unmatched at the end
 repr(ensemble)
 
 ## in the tutorial it says len(ensemble) == len(pdbfiles), but in this case, len(ensemble should be equal to the sum of the number of chains?
