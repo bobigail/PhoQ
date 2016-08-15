@@ -1,10 +1,12 @@
 from prody import *
 from pylab import *
+
 #ion()
 
 # select PDBs to work with
+pathPDBFolder("../PDBs")
 pdbids = ['1yax', '3bqa', '3bq8', '3cgz', '3cgy', '4uey']
-pdbfiles = fetchPDB(*pdbids, compressed=False)
+pdbfiles = fetchPDB(*pdbids, copy=False)
 
 # print len(pdbfiles)
 
