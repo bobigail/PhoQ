@@ -21,6 +21,9 @@ ensemble = PDBEnsemble('PhoQ')
 ensemble.setAtoms(ref_chain)
 ensemble.setCoords(ref_chain)
 
+NoStructure = []
+unmapped = []
+
 for pdbid in pdbids:
     
     hv = parsePDB(pdbid).getHierView()
@@ -28,14 +31,12 @@ for pdbid in pdbids:
         structure = parsePDB(pdbid, subset='calpha')
         # here's the new bit        
         if structure is None:
-            NoStructure = ([])
             NoStructure.append(pdbid)
             continue
         
         mappings = mapOntoChain(chain, ref_chain)
         if len(mappings) == 0:
-            unmapped = ()
-            unmapped.append(pdbid)
+            unmapped.append((pdbid,chain))
             continue
         
         atommap = mappings[0][0]
