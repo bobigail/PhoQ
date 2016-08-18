@@ -5,7 +5,7 @@ from pylab import *
 
 # select PDBs to work with
 pathPDBFolder("../PDBs")
-pdbids = ['1yax', '3bqa', '3bq8', '3cgz', '3cgy', '4uey']
+pdbids = ['1yax', '3bqa', '3bq8', '4uey']
 pdbfiles = fetchPDB(*pdbids, copy=False)
 
 # print len(pdbfiles)
@@ -15,8 +15,12 @@ ref_structure = parsePDB('4uey')
 ref_selection = ref_structure.select('calpha')
 ref_chain = ref_selection.getHierView().getChain('A')
 
+#parameters for comparison
+sequence_identity = 70
+sequence_coverage = 70
+
 # create ensemble
-startLogfile('PhoQ_pca')
+startLogfile('PhoQ_pca_4structs')
 ensemble = PDBEnsemble('PhoQ')
 
 # define atoms and coordinates for the ensemble reference
@@ -36,7 +40,7 @@ for pdbid in pdbids:
             NoStructure.append(pdbid)
             continue
         
-        mappings = mapOntoChain(chain, ref_chain)
+        mappings = mapOntoChain(chain, ref_chain, seqid=sequence_identity, coverage=sequence_coverage)
         if len(mappings) == 0:
             unmapped.append((pdbid,chain))
             continue
@@ -55,7 +59,7 @@ repr(ensemble)
 
 ensemble.iterpose()
 
-closeLogfile('PhoQ_pca')
+closeLogfile('PhoQ_pca_4structs')
 
 
 writePDB('PhoQ_ensemble.pdb', ensemble)
