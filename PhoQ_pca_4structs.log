@@ -1,0 +1,73 @@
+Logging started at 2016-08-18 18:07:48.450826
+PDB file is found in the local folder (/home/gpu/.../1yax.pdb.gz).
+4459 atoms and 1 coordinate set(s) were parsed in 0.02s.
+PDB file is found in the local folder (/home/gpu/.../1yax.pdb.gz).
+574 atoms and 1 coordinate set(s) were parsed in 0.01s.
+Trying to map atoms based on residue numbers and identities:
+  Comparing Chain A from 1yax (len=153) with Chain A from 4uey:
+	Mapped: 140 residues match with 98% sequence identity and 91% overlap.
+PDB file is found in the local folder (/home/gpu/.../1yax.pdb.gz).
+574 atoms and 1 coordinate set(s) were parsed in 0.01s.
+Trying to map atoms based on residue numbers and identities:
+  Comparing Chain B from 1yax (len=134) with Chain A from 4uey:
+	Mapped: 131 residues match with 98% sequence identity and 93% overlap.
+PDB file is found in the local folder (/home/gpu/.../1yax.pdb.gz).
+574 atoms and 1 coordinate set(s) were parsed in 0.01s.
+Trying to map atoms based on residue numbers and identities:
+  Comparing Chain C from 1yax (len=153) with Chain A from 4uey:
+	Mapped: 140 residues match with 98% sequence identity and 91% overlap.
+PDB file is found in the local folder (/home/gpu/.../1yax.pdb.gz).
+574 atoms and 1 coordinate set(s) were parsed in 0.01s.
+Trying to map atoms based on residue numbers and identities:
+  Comparing Chain D from 1yax (len=134) with Chain A from 4uey:
+	Mapped: 131 residues match with 98% sequence identity and 93% overlap.
+PDB file is found in the local folder (/home/gpu/.../3bqa.pdb.gz).
+2709 atoms and 1 coordinate set(s) were parsed in 0.01s.
+PDB file is found in the local folder (/home/gpu/.../3bqa.pdb.gz).
+292 atoms and 1 coordinate set(s) were parsed in 0.01s.
+Trying to map atoms based on residue numbers and identities:
+  Comparing Chain A from 3bqa (len=146) with Chain A from 4uey:
+	Mapped: 140 residues match with 75% sequence identity and 95% overlap.
+PDB file is found in the local folder (/home/gpu/.../3bqa.pdb.gz).
+292 atoms and 1 coordinate set(s) were parsed in 0.01s.
+Trying to map atoms based on residue numbers and identities:
+  Comparing Chain B from 3bqa (len=146) with Chain A from 4uey:
+	Mapped: 140 residues match with 75% sequence identity and 95% overlap.
+PDB file is found in the local folder (/home/gpu/.../3bq8.pdb.gz).
+2421 atoms and 1 coordinate set(s) were parsed in 0.01s.
+PDB file is found in the local folder (/home/gpu/.../3bq8.pdb.gz).
+275 atoms and 1 coordinate set(s) were parsed in 0.00s.
+Trying to map atoms based on residue numbers and identities:
+  Comparing Chain A from 3bq8 (len=142) with Chain A from 4uey:
+	Mapped: 138 residues match with 77% sequence identity and 97% overlap.
+PDB file is found in the local folder (/home/gpu/.../3bq8.pdb.gz).
+275 atoms and 1 coordinate set(s) were parsed in 0.00s.
+Trying to map atoms based on residue numbers and identities:
+  Comparing Chain B from 3bq8 (len=133) with Chain A from 4uey:
+	Mapped: 130 residues match with 77% sequence identity and 92% overlap.
+PDB file is found in the local folder (/home/gpu/.../4uey.pdb.gz).
+3517 atoms and 1 coordinate set(s) were parsed in 0.03s.
+PDB file is found in the local folder (/home/gpu/.../4uey.pdb.gz).
+420 atoms and 1 coordinate set(s) were parsed in 0.02s.
+Trying to map atoms based on residue numbers and identities:
+  Comparing Chain A from 4uey (len=140) with Chain A from 4uey:
+	Mapped: 140 residues match with 100% sequence identity and 100% overlap.
+PDB file is found in the local folder (/home/gpu/.../4uey.pdb.gz).
+420 atoms and 1 coordinate set(s) were parsed in 0.02s.
+Trying to map atoms based on residue numbers and identities:
+  Comparing Chain B from 4uey (len=140) with Chain A from 4uey:
+	Mapped: 139 residues match with 100% sequence identity and 99% overlap.
+PDB file is found in the local folder (/home/gpu/.../4uey.pdb.gz).
+420 atoms and 1 coordinate set(s) were parsed in 0.02s.
+Trying to map atoms based on residue numbers and identities:
+  Comparing Chain C from 4uey (len=140) with Chain A from 4uey:
+	Mapped: 139 residues match with 100% sequence identity and 99% overlap.
+Starting iterative superposition:
+Step #1: RMSD difference = 1.0106e+00
+Step #2: RMSD difference = 9.0759e-03
+Step #3: RMSD difference = 4.5744e-04
+Step #4: RMSD difference = 2.6249e-05
+Iterative superposition completed in 0.01s.
+Final superposition to calculate transformations.
+Superposition completed in 0.00 seconds.
+Logging stopped at 2016-08-18 18:07:48.765086

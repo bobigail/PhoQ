@@ -18,10 +18,11 @@ ref_chain = ref_selection.getHierView().getChain('A')
 #parameters for comparison
 sequence_identity = 70
 sequence_coverage = 70
-
-# create ensemble
-startLogfile('PhoQ_pca_4structs')
 ensemble = PDBEnsemble('PhoQ')
+
+# create log file
+startLogfile('PhoQ_pca_4structs')
+#ensemble = PDBEnsemble('PhoQ')
 
 # define atoms and coordinates for the ensemble reference
 ensemble.setAtoms(ref_chain)
@@ -57,6 +58,7 @@ repr(ensemble)
 
 ## in the tutorial it says len(ensemble) == len(pdbfiles), but in this case, len(ensemble should be equal to the sum of the number of chains?
 
+#align structures into ensemble
 ensemble.iterpose()
 
 closeLogfile('PhoQ_pca_4structs')
@@ -65,4 +67,25 @@ closeLogfile('PhoQ_pca_4structs')
 writePDB('PhoQ_ensemble.pdb', ensemble)
 
 
+# PCA calculations
 
+pca = PCA('PhoQ_pca')
+
+# build covariance for ensemble
+
+pca.buildCovariance(ensemble)
+
+# calc modes (default 20)
+
+pca.calcModes()
+
+saveModel(pca)
+
+# singular value decomposition
+
+pca_svd = PCA('PhoQ_svd')
+pca_svd.performSVD(ensemble)
+
+abs(pca_svd.getEigvals()[:20] - pca.getEigvals()).max()
+
+abs(calcOverlap(pca, pca_svd).diagonal()[:20]).min()

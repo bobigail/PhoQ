@@ -11,3 +11,8 @@ these are the PDBs I'm working with
 
 take each chain from these PDBs and make an ensemble
 
+removed 3CGZ & 3CGY
+
+next steps are PCA and normal mode analysis
+
+
