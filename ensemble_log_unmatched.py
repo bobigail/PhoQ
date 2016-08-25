@@ -81,11 +81,21 @@ pca.calcModes()
 
 saveModel(pca)
 
-# singular value decomposition
+# ANM calculations
 
-pca_svd = PCA('PhoQ_svd')
-pca_svd.performSVD(ensemble)
+anm = ANM('PhoQ_anm')
 
-abs(pca_svd.getEigvals()[:20] - pca.getEigvals()).max()
+# build hessian for reference chain
 
-abs(calcOverlap(pca, pca_svd).diagonal()[:20]).min()
+anm.buildHessian(ref_chain)
+
+anm.calcModes()
+
+saveModel(anm)
+
+
+# create NMD files to use in VMD
+
+writeNMD('PhoQ_pca.nmd', pca[:3], ref_chain)
+
+writeNMD('PhoQ_anm.nmd', anm[:3], ref_chain)
